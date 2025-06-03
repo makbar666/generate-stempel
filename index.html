@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generator Stempel</title>
+    <style>
+      .input-group {
+        margin: 10px 0;
+      }
+      #preview {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Generator Stempel</h2>
+
+      <div class="input-group">
+        <label>Teks Atas:</label>
+        <input
+          type="text"
+          id="textAtas"
+          placeholder=""
+          onchange="generateStamp()"
+        />
+      </div>
+
+      <div class="input-group">
+        <label>Teks Tengah:</label>
+        <input
+          type="text"
+          id="textTengah"
+          placeholder=""
+          onchange="generateStamp()"
+        />
+      </div>
+
+      <div class="input-group">
+        <label>Teks Bawah:</label>
+        <input
+          type="text"
+          id="textBawah"
+          placeholder=""
+          onchange="generateStamp()"
+        />
+      </div>
+
+      <button onclick="downloadStamp()">Download Stempel</button>
+
+      <div id="preview">
+        <canvas id="stampCanvas" width="400" height="400"></canvas>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+    <script src="stamp.js"></script>
+  </body>
+</html>
