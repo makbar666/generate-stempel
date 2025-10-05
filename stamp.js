@@ -70,7 +70,8 @@ function generateStamp() {
                 originY: 'center',
                 // Perbedaan utama ada di sini:
                 // Untuk teks bawah, tambahkan 180 derajat agar tidak terbalik
-                angle: angle + (isTop ? 90 : 270)
+                angle: angle + (isTop ? 90 : 270),
+                fontFamily: 'Arial'   // tambah ini
             });
             textObjects.push(charObject);
         });
@@ -95,7 +96,8 @@ function generateStamp() {
         fontSize: 20,
         fill: 'blue',
         originX: 'center',
-        originY: 'center'
+        originY: 'center',
+        fontFamily: 'Arial'
     });
     const textDuaObj = new fabric.Text(textBawah, {
         left: 200,
@@ -103,7 +105,8 @@ function generateStamp() {
         fontSize: 20,
         fill: 'blue',
         originX: 'center',
-        originY: 'center'
+        originY: 'center',
+        fontFamily: 'Arial'
     });
 
     // Garis horizontal
@@ -140,4 +143,5 @@ function downloadStamp() {
 }
 
 // Generate stempel saat halaman dimuat
+
 window.onload = generateStamp;
